@@ -36,26 +36,28 @@
 		</div>
 
 		<div class="row" id="messageArea">
-			<!--Status panel-->
-			<div class="col-4">				
-				<div class="card">
-						<div class="card-header">Online users</div>
-						<ul class="list-group list-group-flush" id="users"></ul>
-				</div>
-			</div>
+			<div class="row">
+					<!--Status panel-->
+					<div class="col-4">				
+						<div class="card">
+								<div class="card-header">Online users</div>
+								<ul class="list-group list-group-flush" id="users"></ul>
+						</div>
+					</div>
 
-			<!--Chat panel-->
-			<div class="col-4" style="background-color:lavender;">
-				<div class="chat" id="chat">
-					<form id="messageForm">
-						<div class="form-group">
-							<label>Enter message</label>
-							<textarea class="form-control" id="message"></textarea>
-							<br />
-							<input type="submit" class="btn btn-dark" value="Send message" />
-						</div>					
-					</form>
-				</div>
+					<!--Chat panel-->
+					<div class="col-8" >
+						<div class="chat" id="chat">
+							<form id="messageForm">
+								<div class="form-group">
+									<label class="lead">Enter message</label>
+									<textarea class="form-control" id="message"></textarea>
+									<br />
+									<input type="submit" class="btn btn-dark" value="Send message" />
+								</div>					
+							</form>
+						</div>
+					</div>
 			</div>
 		</div>
 	</div>
