@@ -22,14 +22,14 @@
 </head>
 <body>
 	<div class="container">
-		<div id="loginArea" class="row">
+		<div class="row" id="loginArea">
 			<div class="col-10">
 				<form id="userForm">
 					<div class="form-group">
-						<label>Enter Username</label>
+						<label><h1 class="display-4">Enter Username</h1></label>
 						<input class="form-control" id="username" />
 						<br />
-						<input type="submit" class="btn btn-primary" value="Login" />
+						<input type="submit" class="btn btn-dark" value="Login" />
 					</div>					
 				</form>
 			</div>
@@ -37,23 +37,25 @@
 
 		<div class="row" id="messageArea">
 			<!--Status panel-->
-			<div class="col-4" >
-					<h4>Online users</h4>
-					<ul class="list-group" id="users"></ul>
+			<div class="col-4">				
+				<div class="card">
+						<div class="card-header">Online users</div>
+						<ul class="list-group list-group-flush" id="users"></ul>
+				</div>
 			</div>
 
 			<!--Chat panel-->
-			<div class="col-8">
-				<div class="chat" id="chat"></div>
-
-				<form id="messageForm">
-					<div class="form-group">
-						<label>Enter message</label>
-						<textarea class="form-control" id="message"></textarea>
-						<br />
-						<input type="submit" class="btn btn-primary" value="Send message" />
-					</div>					
-				</form>
+			<div class="col-4" style="background-color:lavender;">
+				<div class="chat" id="chat">
+					<form id="messageForm">
+						<div class="form-group">
+							<label>Enter message</label>
+							<textarea class="form-control" id="message"></textarea>
+							<br />
+							<input type="submit" class="btn btn-dark" value="Send message" />
+						</div>					
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -80,7 +82,7 @@
 			});
 
 			socket.on('new message', function(data){
-				$chat.append('<div class="card"> <div class="card-header"><strong>'+data.user+'</strong>: '+data.msg+'</div></div>');
+				$chat.append('<div class="well"> <strong>'+data.user+'</strong>: '+data.msg+'</div></div>');
 			});
 
 			//Submisson of userForm
